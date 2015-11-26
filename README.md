@@ -1,7 +1,7 @@
 # node-ssdp-js
 
 ## Usage
-```
+```javascript
 var Browser = require("ssdp-js");
 var browser = new Browser();
 browser.start(); // by default, ssdp-js would poll ssdp every 5 seconds
