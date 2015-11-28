@@ -56,13 +56,12 @@ var Browser = (function (EventEmitter) {
                     var name = getFriendlyName(xml);
                     if (!name) return;
 
-                    var device = {
-                        name: name,
-                        address: rinfo.address,
-                        xml: headers.LOCATION,
-                        headers: headers,
-                        type: "upnp"
-                    };
+                    var device = new EventEmitter();
+                    device.name = name;
+                    device.address = rinfo.address;
+                    device.xml = headers.LOCATION;
+                    device.headers = headers;
+                    device.type = "upnp";
 
                     _this._devices.push(device);
 
