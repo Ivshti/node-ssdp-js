@@ -12,7 +12,7 @@ var dgram = require("dgram");
 var BROADCAST_ADDR = "239.255.255.250";
 var BROADCAST_PORT = 1900;
 var M_SEARCH = "M-SEARCH * HTTP/1.1\r\nHost: " + BROADCAST_ADDR + ":" + BROADCAST_PORT + "\r\nMan: \"ssdp:discover\"\r\nST: %st\r\nMX: 3\r\n\r\n";
-var SEND_INTERVAL = 5000;
+var SEND_INTERVAL = 10*1000;
 
 var ssdpHeader = /^([^:]+):\s*(.*)$/;
 
